@@ -21,6 +21,10 @@ export default function Overlay() {
       <section className="note" style={{ top: '560vh' }}>
         <p>The kelp keeps moving anyway, on a current that started at the surface.</p>
       </section>
+
+      <section className="seabed-message" style={{ top: '650vh' }}>
+        <p>Seabed reached.</p>
+      </section>
     </div>
   )
 }

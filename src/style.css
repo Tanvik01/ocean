@@ -64,6 +64,22 @@ canvas { display: block; touch-action: pan-y; }
   opacity: 0.72;
 }
 
+.overlay section.seabed-message {
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: min(600px, 85vw);
+}
+
+.seabed-message p {
+  font-size: clamp(1.35rem, 2.8vw, 2rem);
+  font-weight: 200;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  opacity: 0.85;
+  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.7);
+}
+
 .hud {
   position: fixed;
   right: 6vw;
