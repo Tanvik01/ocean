@@ -1,0 +1,95 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  background: #08070a;
+  overflow: hidden;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+canvas { display: block; touch-action: pan-y; }
+
+.overlay { position: relative; width: 100%; pointer-events: none; }
+
+.overlay section { position: absolute; left: 8vw; max-width: min(560px, 78vw); }
+
+.title { top: 26vh; }
+
+.title h1 {
+  font-size: clamp(3rem, 11vw, 8.5rem);
+  font-weight: 200;
+  line-height: 0.88;
+  letter-spacing: -0.045em;
+  text-shadow: 0 2px 40px rgba(0, 0, 0, 0.45);
+}
+
+.title h1 em {
+  display: block;
+  font-style: italic;
+  font-weight: 300;
+  padding-left: 0.12em;
+  color: #ffd9a8;
+}
+
+.title p {
+  margin-top: 1.6rem;
+  font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+  font-weight: 300;
+  opacity: 0.82;
+}
+
+.cue {
+  display: inline-block;
+  margin-top: 3.5rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  animation: breathe 3.2s ease-in-out infinite;
+}
+
+@keyframes breathe { 50% { opacity: 0.15; } }
+
+.note p {
+  font-size: clamp(1.05rem, 2.2vw, 1.6rem);
+  font-weight: 200;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  opacity: 0.72;
+}
+
+.hud {
+  position: fixed;
+  right: 6vw;
+  bottom: 5vh;
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.hud-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  opacity: 0.4;
+}
+
+#depth {
+  font-size: 1.05rem;
+  font-weight: 300;
+  opacity: 0.8;
+  min-width: 5.5ch;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cue { animation: none; }
+}
