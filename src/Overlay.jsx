@@ -1,6 +1,10 @@
 export default function Overlay() {
   return (
     <div className="overlay">
+      <section className="top-credit">
+        <p>made by tanvi</p>
+      </section>
+
       <section className="title">
         <h1>
           Golden
